@@ -22,13 +22,11 @@ jobs:
         uses: docker/setup-buildx-action@v1
         
       - name: Build and push
-  #      id: docker_build
         uses: docker/build-push-action@v2
         with:
           context: ./
           file: ./Dockerfile
           push: true
+          repository: ${{ secrets.DOCKER_USERNAME }}/hello-docker-image
           tags: ${{ secrets.DOCKER_USERNAME }}/hello-docker-image
           
-   #   - name: Image digest   
-   #    run: echo ${{ steps.docker_build.outputs.digest }}
