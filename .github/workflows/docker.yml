@@ -24,7 +24,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
-          file: /hello-docker/Dockerfile
+          file: ./hello-docker/Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/hello-docker-image
           
