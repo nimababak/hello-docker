@@ -27,6 +27,6 @@ jobs:
           context: ./
           file: ./Dockerfile
           push: true
-          repository: ${{ secrets.DOCKER_USERNAME }}/hello-docker-image
+   #       repository: ${{ secrets.DOCKER_USERNAME }}/hello-docker-image
           tags: ${{ secrets.DOCKER_USERNAME }}/hello-docker-image
           
